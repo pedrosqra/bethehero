@@ -1,5 +1,5 @@
-const crypto = require('crypto');
 const connection = require('../database/connection');
+const crypto = require('crypto');
 
 module.exports = {
 
@@ -22,7 +22,7 @@ module.exports = {
             whatsapp,
             city,
             uf,
-        })
+        });
 
         return response.json({ id });
     }

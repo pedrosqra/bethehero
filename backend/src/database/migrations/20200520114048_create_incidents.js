@@ -1,4 +1,3 @@
-
 exports.up = function(knex) {
     return knex.schema.createTable('incidents', function (table) {
         table.increments();
@@ -9,7 +8,10 @@ exports.up = function(knex) {
 
         table.string('ong_id').notNullable();
 
-        table.foreign('ong_id').references('id').inTable('ongs');
+        table
+            .foreign('ong_id')
+            .references('id')
+            .inTable('ongs');
     });
 };
 
