@@ -53,7 +53,7 @@ routes.post('/incidents', celebrate({
     },)
 }), IncidentController.create);
 
-// ROTA PARA DELETAR UM INCIDENTE DE UM ONG
+// ROTA PARA DELETAR UM INCIDENTE DE UMA ONG
 routes.delete('/incidents/:id', celebrate({
     [Segments.PARAMS]: Joi.object().keys({
         id: Joi.number().required(),
