@@ -11,7 +11,7 @@ const routes = express.Router();
 // ROTA DE LISTAGEM DE ONGS
 routes.get('/ongs', OngController.index); 
 
-// ROTA DE CADASTRO DE ONGAS
+// ROTA DE CADASTRO DE ONGS
 routes.post('/ongs', celebrate({
     [Segments.BODY]: Joi.object().keys({
         name: Joi.string().required(),
